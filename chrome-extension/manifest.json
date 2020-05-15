@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "National Portrait Gallery Scavenger Hunt",
-    "description": "",
+    "description": "Icons made by www.flaticon.com/authors/freepik",
     "version": "0.1",
     "content_scripts": [
         {
@@ -18,6 +18,5 @@
         "default_icon": "npg-icon.png"
     },
     "web_accessible_resources": [
-        "icons/eye.svg"
     ]
 }
