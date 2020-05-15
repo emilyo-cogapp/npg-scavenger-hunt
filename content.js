@@ -2,7 +2,7 @@
 // Find image container
 const imageContainer = document.querySelector('.mainImage');
 // Don't run if there is no image container
-if (!imageContainer) return;
+// if (!imageContainer) return;
 
 // Array of URLs
 const portraitUrls = [
@@ -74,17 +74,18 @@ const portraitUrls = [
 ]
 
 // Get current URL
+const currentUrl = window.location.href;
 
 // Is it in the array?
+portraitUrls.forEach(element => {
+    if (currentUrl.includes(element.URL) === true) {
+        // Make img element with corresponding icon
+        const iconEl = document.createElement('img');
+        iconEl.src = chrome.extension.getURL(`icons/${element.icon}.svg`);
 
-// If yes, add correct icon and letter combo
+        // Append the icon to the image container
+        imageContainer.appendChild(iconEl);
 
-// If no, return
-
-
-const eyeIcon = document.createElement('img');
-eyeIcon.src = chrome.extension.getURL("icons/witness.svg");
-
-console.log('image container', imageContainer);
-
-imageContainer.appendChild(eyeIcon);
+        // Add CSS
+    }
+});

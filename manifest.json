@@ -18,6 +18,6 @@
         "default_icon": "npg-icon.png"
     },
     "web_accessible_resources": [
-        "icons/witness.svg"
+        "icons/eye.svg"
     ]
 }
