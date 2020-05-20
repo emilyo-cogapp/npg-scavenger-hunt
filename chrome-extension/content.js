@@ -1,13 +1,11 @@
 /* CONTENT JS */
 // Find image container
 const imageContainer = document.querySelector('.mainImage') ? document.querySelector('.mainImage') : document.querySelector('.iframe-container');
-// Don't run if there is no image container
-// if (!imageContainer) return;
 
 // Get current URL
 const currentUrl = window.location.href;
 
-// Array of URLs
+// Array of correct URLs with SVG icon code and corresponding letter
 const portraitUrls = [
     {
         'URL': 'collections/search/portrait/mw57486/Damon-Albarn',
@@ -76,21 +74,23 @@ const portraitUrls = [
     },
 ];
 
-// Is it in the array?
 portraitUrls.forEach(element => {
-    if (currentUrl.includes(element.URL) === true) {
-        imageContainer.insertAdjacentHTML('afterbegin', element.icon);
-        // Make img element with corresponding icon
-        const iconEl = imageContainer.getElementsByTagName('svg')[0];
+    // Don't run if there is no image container
+    if (!imageContainer) return;
 
+    // If the current URL is a correct portrait (with a symbol)
+    if (currentUrl.includes(element.URL) === true) {
         // Make icon container element
         const iconContainer = document.createElement('div');
         // Add class
         iconContainer.classList.add('npg-scav-hunt_icon-container');
-        // Append icon element
-        iconContainer.appendChild(iconEl);
+        // Append SVG icon markup
+        iconContainer.insertAdjacentHTML('afterbegin', element.icon);
+        // Get this SVG icon element
+        const iconEl = iconContainer.getElementsByTagName('svg')[0];
         // Create text element for corresponding letter
         const iconText = document.createElement('p');
+        // Add actual text
         iconText.innerText = `= ${element.letter}`;
         // Append text to icon container
         iconContainer.appendChild(iconText);
@@ -99,17 +99,6 @@ portraitUrls.forEach(element => {
         imageContainer.appendChild(iconContainer);
 
         // Add CSS
-        // Get image container width and height
-        // const imgContainerWidth = imageContainer.offsetWidth;
-        // const imgContainerHeight = imageContainer.offsetHeight;
-        // const iconContainerWidth = iconContainer.offsetWidth;
-        // const iconContainerHeight = iconContainer.offsetHeight;
-        // Randomly pick y coordinate for placing icon container (based on height of image container minus height of icon container)
-        // const iconContainerX = Math.floor(Math.random() * (imgContainerWidth - iconContainerWidth));
-        // const iconContainerY = Math.floor(Math.random() * (imgContainerHeight - iconContainerHeight));
-        // console.log('x', iconContainerWidth);
-
-        // console.log('y', iconContainerHeight);
         // Image container
         imageContainer.style.position = "relative";
         // Icon container
