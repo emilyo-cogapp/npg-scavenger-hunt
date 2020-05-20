@@ -1,6 +1,7 @@
 body {
     background-color: #a886ce;
     padding: 30px;
+    font-family: 'Jost', sans-serif;
 }
 
 .central-col {
@@ -8,6 +9,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    font-size: 20px;
 }
 
 header {
@@ -22,26 +24,33 @@ header {
 
 h1 {
     font-family: 'Cinzel', sans-serif;
-    font-weight: normal;
+    font-weight: 700;
     text-transform: uppercase;
     margin-top: 30px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.3;
 }
 
 h2 {
     font-weight: normal;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1.2;
 }
 
 .guesser {
-    font-family: 'Cinzel', serif;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .guesser h2 {
     display: block;
     width: 100%;
     text-align: center;
+    text-transform: none;
 }
 
 .letter-symbol-pair {
@@ -72,4 +81,24 @@ h2 {
 
 .letter-symbol-pair__spacer:nth-child(3n) {
     flex-basis: 100%;
+}
+
+.instructions {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.start-link {
+    font-size: 24px;
+    color: #fffbe7;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+}
+
+.start-link:hover {
+    color: salmon;
+}
+
+li {
+    margin-bottom: 1em;
 }
