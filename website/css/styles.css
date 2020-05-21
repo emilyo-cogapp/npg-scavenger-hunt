@@ -89,15 +89,18 @@ h2 {
     margin: 0 auto;
 }
 
-.start-link {
-    font-size: 24px;
+a {
     color: #fffbe7;
-    text-transform: uppercase;
     transition: color 0.2s ease-in-out;
 }
 
-.start-link:hover {
+a:hover {
     color: salmon;
+}
+
+.start-link {
+    font-size: 24px;
+    text-transform: uppercase;
 }
 
 li {
