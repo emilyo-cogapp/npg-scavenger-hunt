@@ -1,12 +1,24 @@
 {
     "manifest_version": 2,
     "name": "National Portrait Gallery Scavenger Hunt",
-    "description": "Icons made by www.flaticon.com/authors/freepik",
-    "version": "0.1",
+    "description": "A scavenger hunt around the National Portrait Gallery website. Icons made by www.flaticon.com/authors/freepik",
+    "version": "1.0",
     "content_scripts": [
         {
           "matches": [
-            "<all_urls>"
+            "https://www.npg.org.uk/collections/search/portrait/mw07599/Vivien-Leigh*",
+            "https://www.npg.org.uk/collections/search/portrait/mw83727/Derek-Jarman*",
+            "https://www.npg.org.uk/collections/search/portrait/mw264864/Elisabeth-Welch*",
+            "https://www.npg.org.uk/collections/search/portrait/mw239065/Shoken-Empress-of-Japan*",
+            "https://www.npg.org.uk/collections/search/portrait/mw280428/Queen-Elizabeth-I*",
+            "https://www.npg.org.uk/collections/explore/from-all-angles/npg-d48094-in-360*",
+            "https://www.npg.org.uk/collections/search/portrait/mw251928/Isambard-Kingdom-Brunel*",
+            "https://www.npg.org.uk/collections/search/portrait/mw144349/The-Crowned-King-Edward-VII-and-Queen-Alexandra-in-Coronation-Robes-on-their-return-from-Westminster-Abbey-Buckingham-Palace-London*",
+            "https://www.npg.org.uk/collections/search/portrait/mw00423/William-Beale*",
+            "https://www.npg.org.uk/collections/search/portrait/mw08429/George-Harrison*",
+            "https://www.npg.org.uk/collections/search/portrait/mw66627/Open-your-mouth-and-shut-your-eyes-Edith-Mary-Liddell-Ina-Liddell-Alice-Liddell*",
+            "https://www.npg.org.uk/collections/search/portrait/mw149426/Blur-Alex-James-Dave-Rowntree-Graham-Coxon-Damon-Albarn*",
+            "https://www.npg.org.uk/collections/search/portrait/mw57486/Damon-Albarn*"
           ],
           "js": ["content.js"]
         }
@@ -14,6 +26,22 @@
     "browser_action": {
         "default_icon": "npg-icon.png"
     },
+    "permissions": [
+      "https://www.npg.org.uk/collections/search/portrait/mw07599/Vivien-Leigh*",
+      "https://www.npg.org.uk/collections/search/portrait/mw83727/Derek-Jarman*",
+      "https://www.npg.org.uk/collections/search/portrait/mw264864/Elisabeth-Welch*",
+      "https://www.npg.org.uk/collections/search/portrait/mw239065/Shoken-Empress-of-Japan*",
+      "https://www.npg.org.uk/collections/search/portrait/mw280428/Queen-Elizabeth-I*",
+      "https://www.npg.org.uk/collections/explore/from-all-angles/npg-d48094-in-360*",
+      "https://www.npg.org.uk/collections/search/portrait/mw251928/Isambard-Kingdom-Brunel*",
+      "https://www.npg.org.uk/collections/search/portrait/mw144349/The-Crowned-King-Edward-VII-and-Queen-Alexandra-in-Coronation-Robes-on-their-return-from-Westminster-Abbey-Buckingham-Palace-London*",
+      "https://www.npg.org.uk/collections/search/portrait/mw00423/William-Beale*",
+      "https://www.npg.org.uk/collections/search/portrait/mw08429/George-Harrison*",
+      "https://www.npg.org.uk/collections/search/portrait/mw66627/Open-your-mouth-and-shut-your-eyes-Edith-Mary-Liddell-Ina-Liddell-Alice-Liddell*",
+      "https://www.npg.org.uk/collections/search/portrait/mw149426/Blur-Alex-James-Dave-Rowntree-Graham-Coxon-Damon-Albarn*",
+      "https://www.npg.org.uk/collections/search/portrait/mw57486/Damon-Albarn*",
+      "activeTab"
+    ],
     "web_accessible_resources": [
     ]
 }
